@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: #f7d3d7;
+}
+h1{
+    margin: 1.5rem;
+    /* background-color: rgb(14, 14, 73); */
+    background-color: #FF2A54;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    /* border: 2px solid green; */
+    gap: 2rem;
+}
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 200px;
+    width: 200px;
+}
+.choice:hover{
+    opacity: 0.7;
+    transform: scale(1.2, 1.2);
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 0.9rem rgba(0,0,0,0.6);
+    border-radius: 1.3rem;
+}
+.score_board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.message_cont{
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    /* text-decoration: underline; */
+    color: rgb(105, 61, 4);
+    padding: 1rem;
+}
+#msg{
+    display: inline;
+    background-color: bisque;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+#comp_score, #user_score{
+    font-size: 3rem;
+}
+.club{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.userchoice, .compchoice{
+    display: inline;
+    color: rgb(105, 61, 4);
+    font-weight: bold;
+    background-color: bisque;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+}

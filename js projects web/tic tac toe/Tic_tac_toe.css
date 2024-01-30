@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #548687;
+    text-align: center;
+}
+h1{
+    margin: 1.2rem;
+}
+.conatiner{
+    height: 70vh;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    /* background: pink; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 1vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border: none;
+    border-radius: 1.3rem;
+    box-shadow:  0 0 1rem rgb(0, 0, 0, 0.5);
+    transition: all ease-in-out 0.1s;
+    font-size: 8vmin;
+    font-weight: bolder;
+    color: rgb(201, 10, 121);   
+    background-color: #ffffc7;
+}
+.box:hover{
+    background-color: rgb(249, 237, 223);
+    border: 1px solid rgb(35, 35, 72);
+}
+.reset{
+    height: 6vmin;
+    width: 15vmin;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 1.4vmin;
+    padding: 0.3vmin;
+    background-color: rgb(15, 14, 15);
+    color: white;
+}
+.reset:hover{
+    border: 2px solid white;
+    color: rgb(240, 211, 214);
+}
+#newgame{
+    height: 6vmin;
+    width: 15vmin;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 1.4vmin;
+    padding: 0.3vmin;
+    background-color: rgb(15, 14, 15);
+    color: white;
+}
+#msg{
+    color: #ffffc7;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.message{
+    margin: 1.3rem;
+}
+.hide{
+    display: none;
+    background-color: rgb(250, 211, 183);
+}

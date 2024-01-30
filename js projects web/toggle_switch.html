@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark & Light Mode</title>
+    <style>
+        .light{
+            background-color: white;
+            color: black;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>One of the best page on the internet</h1>
+    <div class="class" id="id">
+        AMAZING CONTENT
+    </div>
+
+    <button id="mode">change mode</button>
+
+    <script>
+        let mode = document.getElementById('mode');
+        let curMode = 'light';
+        let body = document.querySelector('body');
+
+        mode.addEventListener('click', () =>{
+            if(curMode === 'light')
+            {
+                curMode = 'dark';
+                // body.style.backgroundColor = 'black'
+                // body.style.color = 'white'
+                body.classList.add('dark')
+                body.classList.remove('light')
+            }
+            else{
+                curMode = 'light';
+                // body.style.backgroundColor = 'white'
+                // body.style.color = 'black'
+                body.classList.add('light')
+                body.classList.remove('dark')
+            }
+            // console.log(curMode);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment Q23</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(223, 156, 156, 0.299);
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(133, 91, 7);
+            font-size: 1.5rem;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            color: rgb(174, 9, 250);
+            background-color: rgba(223, 129, 223, 0.537);
+            width: 40%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .digit {
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .txt {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btnBox {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 5px 20px;
+            font-size: 15px;
+            margin: 0px 7px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #start {
+            background-color: greenyellow;
+        }
+
+        #stop {
+            background-color: skyblue;
+        }
+
+        #reset {
+            background-color: tomato;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>|| Assignment Q23 ||</h2>
+    <hr><br><br>
+    <div class="box">
+        <div class="time">
+            <span class="digit" id="hr">00</span>
+            <span class="txt">Hr</span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">Min</span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">Sec</span>
+            <span class="digit" id="ms">00</span>
+        </div>
+        <div class="btnBox">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="stop" onclick="stop()">Stop</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        var ms = 0;
+        var time = false;
+        function start() {
+            time = true;
+            watch();
+        }
+        function stop() {
+            time = false;
+        }
+        function reset() {
+            time = false;
+            hr = 0;
+            min = 0;
+            sec = 0;
+            ms = 0;
+            document.getElementById('hr').innerHTML = "00";
+            document.getElementById('min').innerHTML = "00";
+            document.getElementById('sec').innerHTML = "00";
+            document.getElementById('ms').innerHTML = "00";
+        }
+        function watch() {
+            if (time == true) {
+                ms = ms + 1;
+                if (ms == 100) {
+                    sec = sec + 1;
+                    ms = 0;
+                }
+                if (sec == 60) {
+                    min = min + 1;
+                    sec = 0;
+                }
+                if (min == 60) {
+                    hr = hr + 1;
+                    min = 0;
+                    sec = 0;
+                }
+                var hrs = hr;
+                var mins = min;
+                var secs = sec;
+                var mss = ms;
+                if (hr < 10) {
+                    hrs = "0" + hrs;
+                }
+                if (min < 10) {
+                    mins = "0" + mins;
+                }
+                if (sec < 10) {
+                    secs = "0" + secs;
+                }
+                if (ms < 10) {
+                    mss = "0" + mss;
+                }
+                document.getElementById('hr').innerHTML = hrs;
+                document.getElementById('min').innerHTML = mins;
+                document.getElementById('sec').innerHTML = secs;
+                document.getElementById('ms').innerHTML = mss;
+                setTimeout("watch()", 0.1);
+            }
+        }
+    </script>
+</body>
+
+</html>
